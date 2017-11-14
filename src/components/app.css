@@ -1,23 +1,23 @@
 html, body {
-  background-color: lightgrey;
-  width: 100%;
-  height: 100%;
+    background-color: lightgrey;
+    width: 100%;
+    height: 100%;
 }
 
 #root {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .box {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  /*
-  If touch-action: none is not used, I get the following warning in Chrome:
-  [Intervention] Unable to preventDefault inside passive event listener due
-  to target being treated as passive. See:
-  https://www.chromestatus.com/features/5093566007214080
-  */
-  touch-action: none;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    /*
+    If touch-action: none is not used, I get the following warning in Chrome:
+    [Intervention] Unable to preventDefault inside passive event listener due
+    to target being treated as passive. See:
+    https://www.chromestatus.com/features/5093566007214080
+    */
+    /*touch-action: none;*/
 }
