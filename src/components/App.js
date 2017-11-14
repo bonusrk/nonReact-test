@@ -3,50 +3,6 @@ import {connect} from 'react-redux'
 import './app.css'
 
 class Tile extends Component {
-
-  componentDidMount() {
-    // var hasListenerOptions = ( function () {
-    //   var result = false;
-    //   window.addEventListener('touchstart', null, Object.defineProperty({}, "passive", {
-    //     get: function () {
-    //       result = true
-    //     }
-    //   }));
-    //   return result;
-    // }());
-    // console.log('LISTENER', hasListenerOptions)
-    // const boxes = document.getElementsByClassName('tile')
-    // console.log(boxes)
-    //
-    // //click handler
-    // function onMouseDown(e) {
-    //   //this wont stop double delete
-    //   // e.preventDefault()
-    //   // e.stopPropagation()
-    //   console.log('I am CLICK target Id===>', e.target.id)
-    //   console.log('EVENT TYPE ===>', e.type, ', EVENT X ===>', e.clientX, ', EVENT Y ===>', e.clientY)
-    // }
-    //
-    // //ontouchstart handler
-    // function onTouchStart(e) {
-    //   e.preventDefault()  //This stops double delete
-    //   // e.stopPropagation()
-    //   //Use 'touches' object to get touch event data
-    //   console.log('I am TOUCHSTART target ID ===>', e.touches[0].target.id)
-    //   console.log('EVENT TYPE ===>', e.type, ', EVENT X ===>', e.touches[0].pageX, ', EVENT Y ===>', e.touches[0].pageX)
-    // }
-    //
-    // // Add eventListener for click
-    // Array.from(boxes).forEach(function (item, i, arr) {
-    //   item.addEventListener('mousedown', onMouseDown)
-    // })
-    //
-    // // Add eventListener for touch
-    // Array.from(boxes).forEach(function (item, i, arr) {
-    //   item.addEventListener('touchstart', onTouchStart)
-    // })
-  }
-
   toggle = e => {
     e.nativeEvent.preventDefault()
     e.nativeEvent.stopPropagation()
