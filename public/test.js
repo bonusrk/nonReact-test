@@ -26,7 +26,7 @@ function onMouseDown(e) {
   document.getElementById(id).remove()
 }
 
-//ontouchstart handler
+//touchstart handler
 function onTouchStart(e) {
   //This stops double delete
   e.preventDefault()
