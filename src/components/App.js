@@ -3,10 +3,36 @@ import {connect} from 'react-redux'
 import './app.css'
 
 class Tile extends Component {
+
+  componentDidMount() {
+    const tiles = document.getElementsByClassName('tile')
+    Array.from(tiles).forEach((item, i, arr) => {
+      item.addEventListener('touchstart', this._preventMe)
+    })
+  }
+
+  componentWillUnmount() {
+    const tiles = document.getElementsByClassName('tile')
+    Array.from(tiles).forEach((item, i, arr) => {
+      item.removeEventListener('touchstart', this._preventMe)
+    })
+  }
+
+
+  _preventMe = e => {
+    console.log(e.nativeEvent)
+    e.preventDefault()
+    console.log('EVENT===>', e.nativeEvent)
+    console.log(e.touches)
+    console.log('I AM EVENT=========> ', 'X-', e.pageX, ' Y-', e.pageY, ' Type- ', e.type)
+    console.log(e.type)
+    console.log('id: ', this.props.id)
+  }
+
   toggle = e => {
-    e.nativeEvent.preventDefault()
-    e.nativeEvent.stopPropagation()
-    e.nativeEvent.stopImmediatePropagation()
+    // e.nativeEvent.preventDefault()
+    // e.nativeEvent.stopPropagation()
+    // e.nativeEvent.stopImmediatePropagation()
     console.log('EVENT===>', e.nativeEvent)
     console.log(e.touches)
     console.log('I AM EVENT=========> ', 'X-', e.pageX, ' Y-', e.pageY, ' Type- ', e.type)
